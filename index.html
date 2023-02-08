@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+    <div class="count_down_body" id="count_down_body">
+        <div class="count_down" id="count_down">
+            3
+        </div>
+    </div>
+    <div class="main_div">
+
+        <div class="top">
+            <div class="show_text_area" id="system_type">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsam harum eum reprehenderit doloribus quasi
+                modi voluptatem id quis officia ex, consequatur eveniet ea laboriosam autem officiis accusamus rem nulla
+                tempore ipsa dignissimos impedit repudiandae, soluta vero. Repellat soluta sapiente neque quod officia.
+                Deleniti corporis voluptatem, tenetur voluptates est perspiciatis doloribus asperiores non culpa ducimus
+                aut accusantium sapiente mollitia magnam excepturi dolorum dolore aliquid exercitationem harum, nihil
+                maiores quasi numquam vel. Facere atque expedita tempora odio quibusdam commodi libero consequatur est
+                cupiditate, suscipit nihil fuga hic architecto sed voluptatem corporis excepturi quos doloribus,
+                maiores, distinctio vel ullam consequuntur officia. Quos, illo dolor. Est laudantium temporibus labore,
+                vel quibusdam quam, itaque dolorem magni sequi accusamus tempore pariatur doloremque beatae praesentium,
+                assumenda perferendis libero incidunt repudiandae porro maiores non. Quae animi, eligendi commodi eos id
+                sit ut voluptates fugit officia aperiam amet in, esse quia suscipit sint ad unde magni veritatis
+                voluptate odio? Facere recusandae minus consequuntur ipsum exercitationem optio eveniet molestiae?
+                Praesentium facilis quibusdam earum! Officiis, laboriosam dicta quis natus doloremque similique! Id
+                nesciunt aut vel sint qui facilis, voluptatum recusandae omnis, ipsum veniam asperiores officiis. Maxime
+                eos, veniam officiis obcaecati ipsam qui cupiditate nam asperiores sunt magni beatae quasi molestias
+                quae!
+            </div>
+
+
+
+            <!-- levels not done -->
+
+            <!-- <div class="show_text_area" style="display: block;" id="system_type">easy</div>
+            <div class="show_text_area" style="display: none;" >Midium</div>
+            <div class="show_text_area" style="display: none;" >Hard</div> -->
+
+
+
+            <div class="information_area">
+                <div class="level">
+                    <div class="level_text">Level :-</div>
+                    <div class="dr_down" style="z-index: 1;">
+                        <div class="drd_body" id="drd_body">Easy</div>
+                        <div class="hidden_part">
+
+                            <div class="drd_container" onclick="select_level(this.id)" id="Easy">
+                                Easy
+                            </div>
+                            <div class="drd_container" onclick="select_level(this.id)" id="Midium">
+                                Midium
+                            </div>
+                            <div class="drd_container" onclick="select_level(this.id)" id="Hard">
+                                Hard
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+                <div class="timer">
+                    <div class="circle_box">
+                        <div class="circle">
+                            <div class="clock">
+                                <div class="glass">
+                                    <div class="dot2"></div>
+                                </div>
+                                <div class="dot">
+                                    <div class="stick" id="stick"> </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="set_time">
+
+                        <div class="set_time_inner_box">
+                            <div class="level_text">Time:-</div>
+
+                            <div class="dr_down" style="width: 30%;">
+                                <div class="drd_body" id="drd_time_body">1</div>
+
+                                <div class="hidden_part">
+
+                                    <div class="drd_container" id="1" onclick="select_time(this.id)">
+                                        1
+                                    </div>
+                                    <div class="drd_container" id="5" onclick="select_time(this.id)">
+                                        5
+                                    </div>
+                                    <div class="drd_container" id="10" onclick="select_time(this.id)">
+                                        10
+                                    </div>
+                                    <div class="drd_container" id="15" onclick="select_time(this.id)">
+                                        15
+                                    </div>
+                                    <div class="drd_container" id="30" onclick="select_time(this.id)">
+                                        30
+                                    </div>
+                                    <div class="drd_container" id="45" onclick="select_time(this.id)">
+                                        45
+                                    </div>
+                                    <div class="drd_container" id="60" onclick="select_time(this.id)">
+                                        60
+                                    </div>
+
+
+                                </div>
+
+
+                            </div>
+
+                            <div class="min">Min</div>
+                        </div>
+
+                    </div>
+                </div>
+                <button class="start btn" id="start_btn" onclick="start_the_game()">Start</button>
+               
+                <button class="stop btn btn_disabled" id="stop_btn" onclick="end_the_game()" disabled>Stop</button>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="writting_area">
+                <textarea class="text_area" id="user_type" oninput="user_value_fun()" onkeydown="key_fun(event)"
+                    placeholder="type here...." disabled></textarea>
+            </div>
+            <div class="result_area">
+
+
+                <div class="boxes">
+                    <div class="box_left">currect words</div>
+                    <div class="box_right" id="currect_word">0</div>
+                </div>
+                <div class="boxes">
+                    <div class="box_left">wrong words</div>
+                    <div class="box_right" id="wrong_word">0</div>
+                </div>
+                <div class="boxes">
+                    <div class="box_left">Total words</div>
+                    <div class="box_right" id="total_words">0</div>
+                </div>
+                <div class="boxes">
+                    <div class="box_left">currect char</div>
+                    <div class="box_right" id="currect_char">0</div>
+                </div>
+                <div class="boxes">
+                    <div class="box_left">wrong char</div>
+                    <div class="box_right" id="wrong_char">0</div>
+                </div>
+                
+                <div class="boxes">
+                    <div class="box_left">Total Char</div>
+                    <div class="box_right" id="total_char">0</div>
+                </div>
+                <div class="boxes">
+                    <div class="box_left">Accuracy</div>
+                    <div class="box_right" id="accuracy">0<span>%</span></div>
+                </div>
+
+
+                <div class="boxes">
+                    <div class="box_left">Time</div>
+                    <div class="box_right" id="times">0 </div>
+                </div>
+                <div class="boxes">
+                    <div class="box_left">WPM</div>
+                    <div class="box_right" id="speed">0 </div>
+                </div>
+                <div class="boxes">
+                    <div class="box_left">AWPM </div>
+                    <div class="box_right" id="speed_awpm">0 </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="js.js"></script>
+
+</html>
